@@ -69,14 +69,14 @@ export default {
     getLabels() {
       let label = [];
       this.pokeData.forEach((el) => {
-        label.append(el.name);
+        label.push(el.name);
       });
       this.chartData.labels = label;
     },
     getCounts() {
       let count = [];
       this.pokeData.forEach((el) => {
-        count.append(el.count);
+        count.push(el.count);
       });
       this.chartData.datasets[0].data = count;
     },
