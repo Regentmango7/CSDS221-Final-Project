@@ -136,15 +136,12 @@ export default {
               if (index == this.pokeData.length - 1) {
                 this.typesLoaded = true;
                 console.log('data', this.pokeData);
+                this.getCounts();
+                this.getLabels();
               }
             });
         });
       });
-  },
-  mounted() {
-    //alert();
-    //this.getCounts();
-    //this.getLabels();
   },
 };
 </script>
