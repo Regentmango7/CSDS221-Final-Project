@@ -4,11 +4,7 @@
     :chart-data="chartData"
     :chart-id="chartId"
     :dataset-id-key="datasetIdKey"
-    :plugins="plugins"
-    :css-classes="cssClasses"
-    :styles="styles"
-    :width="width"
-    :height="height"
+    class="component"
   />
 </template>
 
@@ -43,26 +39,6 @@ export default {
     datasetIdKey: {
       type: String,
       default: 'label',
-    },
-    width: {
-      type: Number,
-      default: 400,
-    },
-    height: {
-      type: Number,
-      default: 400,
-    },
-    cssClasses: {
-      default: '',
-      type: String,
-    },
-    styles: {
-      type: Object,
-      default: () => {},
-    },
-    plugins: {
-      type: Object,
-      default: () => {},
     },
   },
   methods: {
@@ -158,5 +134,10 @@ li {
 }
 a {
   color: #42b983;
+}
+.component {
+  position: relative;
+  margin: auto;
+  width: 500px;
 }
 </style>

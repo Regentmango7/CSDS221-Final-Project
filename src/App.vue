@@ -3,7 +3,14 @@
   <div id="app">
     <Table />
   </div>
-  <p>Using pokeapi</p>
+  <div class="footer">
+    <p>
+      This chart displays the number of pokemon of each type (Pokemon with dual
+      types are counted for both types)
+    </p>
+    <p>Pokemon data collected using pokeapi.co</p>
+    <p>Website made by JD Tramonte</p>
+  </div>
 </template>
 
 <script>
@@ -27,5 +34,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.footer {
+  position: relative;
+  bottom: 0;
+  margin: auto;
 }
 </style>
