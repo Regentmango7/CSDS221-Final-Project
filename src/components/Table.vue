@@ -117,7 +117,6 @@ export default {
     },
   },
   created() {
-    console.time('data');
     axios
       .get('https://pokeapi.co/api/v2/type/')
       .then((res) => {
@@ -125,7 +124,6 @@ export default {
       })
       .finally(() => {
         this.dataLoaded = true;
-        console.time('types');
         this.pokeData.forEach((el, index) => {
           axios
             .get(el.url)
@@ -134,7 +132,6 @@ export default {
             })
             .finally(() => {
               if (index == this.pokeData.length - 1) {
-                this.typesLoaded = true;
                 console.log('data', this.pokeData);
                 this.getCounts();
                 this.getLabels();
